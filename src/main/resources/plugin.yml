@@ -1,0 +1,46 @@
+name: CashProReloaded
+version: '${project.version}'
+main: com.mishkaworld.cashpro.CashProReloaded
+api-version: '1.21'
+author: Misha Ermakov
+description: Валютная экономика для сервера Minecraft
+website: https://mishkaworld.com
+softdepend: [PlaceholderAPI]
+
+commands:
+  rub:
+    description: Команды для работы с рублями
+    usage: /rub [balance|pay|top|trans|set|give|take]
+    aliases: [рубль, рубли]
+    permission: cashpro.rub
+    permission-message: "&cУ вас нет прав для использования этой команды!"
+  
+  mishka:
+    description: Команды для работы с мишками
+    usage: /mishka [balance|pay|top|trans|set|give|take]
+    aliases: [мишка, мишки]
+    permission: cashpro.mishka
+    permission-message: "&cУ вас нет прав для использования этой команды!"
+  
+  cashpro:
+    description: Административные команды плагина
+    usage: /cashpro reload
+    permission: cashpro.admin
+    permission-message: "&cУ вас нет прав для использования этой команды!"
+
+permissions:
+  cashpro.rub:
+    description: Доступ к командам рублей
+    default: true
+  cashpro.mishka:
+    description: Доступ к командам мишек
+    default: true
+  cashpro.admin:
+    description: Административные права
+    default: op
+  cashpro.rub.admin:
+    description: Административные права для рублей
+    default: op
+  cashpro.mishka.admin:
+    description: Административные права для мишек
+    default: op 

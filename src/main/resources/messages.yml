@@ -1,0 +1,70 @@
+# CashPro Reloaded - Конфигурация сообщений
+# Автор: Misha Ermakov
+# Компания: MishkaWorld
+
+messages:
+  # Общие сообщения
+  prefix: "&8[&6CashPro&8] &r"
+  no_permission: "&cУ вас нет прав для использования этой команды!"
+  player_not_found: "&cИгрок &e{player} &cне найден!"
+  invalid_amount: "&cНеверная сумма! Минимум: 1, максимум: 10,000,000"
+  insufficient_funds: "&cНедостаточно средств! Ваш баланс: &e{balance} {symbol}"
+  cannot_pay_yourself: "&cВы не можете перевести деньги самому себе!"
+  
+  # Сообщения баланса
+  balance:
+    balance_line: "&e{currency}: &a{amount} {symbol}"
+  
+  # Сообщения переводов
+  pay:
+    success_sender: "&aВы перевели &e{amount} {symbol} &aигроку &e{player}"
+    success_receiver: "&aВы получили &e{amount} {symbol} &aот игрока &e{sender}"
+    failed: "&cОшибка при переводе средств!"
+  
+  # Сообщения административных команд
+  admin:
+    set_success: "&aБаланс игрока &e{player} &aустановлен: &e{amount} {symbol}"
+    give_success: "&aИгроку &e{player} &aвыдано: &e{amount} {symbol}"
+    take_success: "&aУ игрока &e{player} &aсписано: &e{amount} {symbol}"
+    operation_failed: "&cОшибка при выполнении операции!"
+  
+  # Сообщения топ игроков
+  top:
+    title: "&6=== Топ игроков по валюте &e{currency} &6==="
+    player_line: "&e{position}. &f{player}: &a{amount} {symbol}"
+    footer: "&6================================"
+    no_data: "&cНет данных для отображения!"
+  
+  # Сообщения транзакций
+  transactions:
+    title: "&6=== Транзакции (страница &e{page}&6/&e{total_pages}&6) ==="
+    transaction_line: "&7{transaction}"
+    footer: "&6================================"
+    no_transactions: "&cТранзакции не найдены!"
+    invalid_page: "&cНеверный номер страницы!"
+  
+  # Сообщения перезагрузки
+  reload:
+    success: "&aКонфигурация успешно перезагружена!"
+    failed: "&cОшибка при перезагрузке конфигурации!"
+  
+  # Сообщения ошибок
+  errors:
+    database_error: "&cОшибка базы данных!"
+    config_error: "&cОшибка конфигурации!"
+    unknown_error: "&cНеизвестная ошибка!"
+    command_not_found: "&cКоманда не найдена!"
+    command_execution_error: "&cОшибка при выполнении команды: {error}"
+    player_only_command: "&cЭта команда может быть использована только игроками!"
+    console_only_command: "&cЭта команда может быть использована только из консоли!"
+    player_not_online: "&cИгрок &e{player} &cне в сети!"
+    insufficient_funds_detailed: "&cУ игрока &e{player} &cнедостаточно средств! Баланс: &e{balance} {symbol}"
+    specify_player: "&cУкажите игрока для просмотра баланса!"
+  
+  # Сообщения использования команд
+  usage:
+    cashpro_reload: "&cИспользование: &e/cashpro reload"
+    currency_pay: "&cИспользование: &e/{currency} pay <игрок> <сумма>"
+    currency_set: "&cИспользование: &e/{currency} set <игрок> <сумма>"
+    currency_give: "&cИспользование: &e/{currency} give <игрок> <сумма>"
+    currency_take: "&cИспользование: &e/{currency} take <игрок> <сумма>" 

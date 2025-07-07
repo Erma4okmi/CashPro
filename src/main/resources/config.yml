@@ -1,0 +1,24 @@
+# CashPro Reloaded - Основная конфигурация
+# Автор: Misha Ermakov
+# Компания: MishkaWorld
+
+# Основная валюта сервера
+main_coins: rub
+
+# Логирование всех транзакций по всем валютам
+transactions-log: true
+
+# Настройки базы данных
+database:
+  # Тип базы данных (sqlite, mysql)
+  type: sqlite
+  # Файл для хранения базы данных (только для SQLite)
+  file: cashpro.db
+  # Настройки MySQL (если используется)
+  mysql:
+    host: localhost
+    port: 3306
+    database: cashpro
+    username: root
+    password: password
+    useSSL: false 

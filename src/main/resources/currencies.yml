@@ -1,0 +1,16 @@
+# CashPro Reloaded - Конфигурация валют
+# Автор: Misha Ermakov
+# Компания: MishkaWorld
+
+currencies:
+  rub:
+    name: "Рубль"
+    symbol: "₽"
+    command: "rub"
+    start_value: 1000
+  
+  mishka:
+    name: "Мишка"
+    symbol: "🐻"
+    command: "mishka"
+    start_value: 100 
