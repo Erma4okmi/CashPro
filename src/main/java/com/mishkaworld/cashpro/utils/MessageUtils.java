@@ -1,7 +1,5 @@
 package com.mishkaworld.cashpro.utils;
 
-import org.bukkit.ChatColor;
-
 /**
  * Утилитарный класс для форматирования сообщений
  * 
@@ -19,7 +17,29 @@ public class MessageUtils {
         if (message == null) {
             return "";
         }
-        return ChatColor.translateAlternateColorCodes('&', message);
+        return translateAlternateColorCodes('&', message);
+    }
+    
+    /**
+     * Заменяет альтернативные цветовые коды на стандартные
+     * 
+     * @param altColorChar символ альтернативного цвета
+     * @param textToTranslate текст для перевода
+     * @return текст с переведенными цветовыми кодами
+     */
+    private static String translateAlternateColorCodes(char altColorChar, String textToTranslate) {
+        if (textToTranslate == null) {
+            return null;
+        }
+        
+        char[] b = textToTranslate.toCharArray();
+        for (int i = 0; i < b.length - 1; i++) {
+            if (b[i] == altColorChar && "0123456789AaBbCcDdEeFfKkLlMmNnOoRrXx".indexOf(b[i + 1]) > -1) {
+                b[i] = '§';
+                b[i + 1] = Character.toLowerCase(b[i + 1]);
+            }
+        }
+        return new String(b);
     }
     
     /**
