@@ -3,7 +3,6 @@ package com.mishkaworld.cashpro.placeholders;
 import com.mishkaworld.cashpro.CashProReloaded;
 import com.mishkaworld.cashpro.database.DatabaseManager;
 import com.mishkaworld.cashpro.utils.MessageUtils;
-import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
 
 import java.util.List;
@@ -33,7 +32,7 @@ public class CashProPlaceholderExpansion extends me.clip.placeholderapi.expansio
     
     @Override
     public String getVersion() {
-        return plugin.getDescription().getVersion();
+        return plugin.getPluginMeta().getVersion();
     }
     
     @Override

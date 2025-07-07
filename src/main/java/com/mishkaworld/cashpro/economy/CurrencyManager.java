@@ -1,7 +1,6 @@
 package com.mishkaworld.cashpro.economy;
 
 import com.mishkaworld.cashpro.CashProReloaded;
-import com.mishkaworld.cashpro.config.ConfigManager;
 import com.mishkaworld.cashpro.database.DatabaseManager;
 import com.mishkaworld.cashpro.utils.MessageUtils;
 import com.mishkaworld.cashpro.utils.ValidationUtils;

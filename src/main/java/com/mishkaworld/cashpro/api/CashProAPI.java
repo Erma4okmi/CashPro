@@ -1,8 +1,6 @@
 package com.mishkaworld.cashpro.api;
 
 import com.mishkaworld.cashpro.CashProReloaded;
-import org.bukkit.entity.Player;
-
 import java.util.UUID;
 
 /**
