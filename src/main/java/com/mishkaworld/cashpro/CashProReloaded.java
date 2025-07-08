@@ -6,8 +6,11 @@ import com.mishkaworld.cashpro.commands.ReloadCommand;
 import com.mishkaworld.cashpro.config.ConfigManager;
 import com.mishkaworld.cashpro.database.DatabaseManager;
 import com.mishkaworld.cashpro.economy.CurrencyManager;
+import com.mishkaworld.cashpro.economy.CurrencyOperations;
+import com.mishkaworld.cashpro.economy.TransactionLogger;
 import com.mishkaworld.cashpro.listeners.PlayerListener;
 import com.mishkaworld.cashpro.placeholders.CashProPlaceholderExpansion;
+import com.mishkaworld.cashpro.utils.CurrencyFormatter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -25,6 +28,9 @@ public class CashProReloaded extends JavaPlugin {
     private ConfigManager configManager;
     private DatabaseManager databaseManager;
     private CurrencyManager currencyManager;
+    private CurrencyOperations currencyOperations;
+    private TransactionLogger transactionLogger;
+    private CurrencyFormatter currencyFormatter;
     private Logger logger;
     
     @Override
@@ -49,6 +55,11 @@ public class CashProReloaded extends JavaPlugin {
             // Инициализация менеджера валют
             currencyManager = new CurrencyManager(this);
             currencyManager.initialize();
+            
+            // Инициализация компонентов экономики
+            currencyOperations = new CurrencyOperations(this);
+            transactionLogger = new TransactionLogger(this);
+            currencyFormatter = new CurrencyFormatter(this);
             
             // Регистрация команд
             registerCommands();
@@ -148,5 +159,26 @@ public class CashProReloaded extends JavaPlugin {
      */
     public CurrencyManager getCurrencyManager() {
         return currencyManager;
+    }
+    
+    /**
+     * Получить операции с валютой
+     */
+    public CurrencyOperations getCurrencyOperations() {
+        return currencyOperations;
+    }
+    
+    /**
+     * Получить логгер транзакций
+     */
+    public TransactionLogger getTransactionLogger() {
+        return transactionLogger;
+    }
+    
+    /**
+     * Получить форматтер валют
+     */
+    public CurrencyFormatter getCurrencyFormatter() {
+        return currencyFormatter;
     }
 } 

@@ -61,7 +61,7 @@ public class SetCommand implements SubCommand {
         );
         
         if (success) {
-            String symbol = plugin.getCurrencyManager().getCurrencySymbol(currency);
+            String symbol = plugin.getCurrencyFormatter().getCurrencySymbol(currency);
             sender.sendMessage(MessageUtils.format(plugin.getConfigManager().getMessage("admin.set_success",
                 "player", targetPlayer.getName(),
                 "amount", MessageUtils.formatNumber(amount),

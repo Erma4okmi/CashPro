@@ -160,7 +160,7 @@ public class CashProAPI {
         if (plugin == null) {
             throw new IllegalStateException("CashPro API не инициализирован");
         }
-        return plugin.getCurrencyManager().getFormattedBalance(playerUuid, currency);
+        return plugin.getCurrencyFormatter().getFormattedBalance(playerUuid, currency);
     }
     
     /**
@@ -174,6 +174,6 @@ public class CashProAPI {
         if (plugin == null) {
             throw new IllegalStateException("CashPro API не инициализирован");
         }
-        return plugin.getCurrencyManager().getFormattedBalance(playerName, currency);
+        return plugin.getCurrencyFormatter().getFormattedBalance(playerName, currency);
     }
 } 
